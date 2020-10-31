@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+/*==========
+DEFAULTS
+=========*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: #6d708d;
+  min-height: 100vh;
+  background: url(../images/bg-top.svg) right top no-repeat, url(../images/bg-bottom.svg) left bottom no-repeat;
+  background-color: #f6f6fe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*==========
+COMPONENTS
+=========*/
+.card {
+  background: #fff;
+  -webkit-box-shadow: 0 5px 15px rgba(109, 112, 141, 0.3);
+          box-shadow: 0 5px 15px rgba(109, 112, 141, 0.3);
+  border-radius: 10px;
+  padding: 2em;
+  text-align: center;
+}
+
+.card__plan {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.card__price {
+  color: #494c5f;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+}
+
+.card__currency {
+  font-size: 2.1rem;
+}
+
+.card__amount {
+  font-size: 4rem;
+}
+
+.card__list {
+  list-style: none;
+  margin: 25px 0 35px;
+}
+
+.card__item {
+  border-top: 1px solid #b3b5c6;
+  padding: 15px;
+}
+
+.card__item:last-child {
+  border-bottom: 1px solid #b3b5c6;
+}
+
+.card__button {
+  border-radius: 5px;
+  border: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(90deg, #a3a8f0, #696fdd);
+  width: 100%;
+  padding: 1.3em 0;
+  font-family: 'Montserrat';
+  font-size: 0.7rem;
+  color: #fff;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #494c5f;
+  background-color: transparent;
+  color: #696fdd;
+}
+
+.card--primary {
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(90deg, #a3a8f0, #696fdd);
+  background: linear-gradient(150deg, #a3a8f0, #696fdd);
+  color: #fff;
+}
+
+.card--primary .card__price {
+  color: #fff;
+}
+
+.card--primary .card__button {
+  background: none;
+  background-color: #fff;
+  color: #696fdd;
+}
+
+.card--primary .card__button:hover {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+/*==========
+LAYOUT
+=========*/
+header, main {
+  width: 90%;
+  max-width: 1050px;
+  text-align: center;
+}
+
+header {
+  margin: 4em 0 5em;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 2em;
+}
+
+/*==========
+DESKTOP
+=========*/
+@media only screen and (min-width: 1100px) {
+  header {
+    margin: 1em 0 5em;
+  }
+  main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 350px;
+            flex: 1 1 350px;
+  }
+  .card:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .card:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .card--primary {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
