@@ -28,8 +28,7 @@ body {
     font-size: 15px;
     color: $grayish-blue;
     min-height: 100vh;
-    background: url(../images/bg-top.svg) right top no-repeat,
-                url(../images/bg-bottom.svg) left bottom no-repeat;
+    background: url(../images/bg-top.svg) 11.9rem -2.4rem no-repeat;
     background-color: $very-light-grayish-blue;
 
     display: flex;
@@ -43,7 +42,6 @@ body {
 COMPONENTS
 =========*/
 .card {
-        // flex: 1 1 350px;
     background: #fff;
     box-shadow: 0 5px 15px hsla(233, 13%, 49%, 0.3);
     border-radius: 10px;
@@ -136,7 +134,6 @@ $circle-translate: $toggle-button-width - $circle-size - ($toggle-button-padding
     display: flex;
     align-items: center;
     column-gap: 20px;
-    // color: $grayish-blue;
 
     // Real checkbox hidden
     &__checkbox {
@@ -174,7 +171,6 @@ $circle-translate: $toggle-button-width - $circle-size - ($toggle-button-padding
     &:active {
         .toggle-switch__button {
             opacity: 0.6;
-            // background-image: $rainbow-toggle;
         }
     }
 }
@@ -185,6 +181,7 @@ LAYOUT
 =========*/
 header, main {
     width: 85%;
+    min-width: 318px;
     max-width: 1050px;
     text-align: center;
 }
@@ -209,6 +206,11 @@ DESKTOP
 =========*/
 
 @media only screen and (min-width: 1100px) {
+    body {
+        background: url(../images/bg-top.svg) right top no-repeat,
+                url(../images/bg-bottom.svg) left bottom no-repeat;
+        background-color: $very-light-grayish-blue;
+    }
     header {
         margin: 1em 0 4.3em;
     }
@@ -231,11 +233,8 @@ DESKTOP
         }
     }
 
-
     .card--primary {
         padding-top: 4em;
         padding-bottom: 4em;
     }
-
-
 }
