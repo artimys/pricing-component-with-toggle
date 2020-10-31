@@ -19,10 +19,10 @@
   <header>
     <h1>Our Pricing</h1>
 
-    <div class="toggle-switch">
+    <div class="toggle-switch" role="switch" aria-label="Pricing Toggle Button">
       <span class="toggle-switch__label">Annually</span>
-      <input type="checkbox" id="checkbox" name="checkbox" value="checkbox" class="toggle-switch__checkbox">
-      <label for="checkbox" class="toggle-switch__button">
+      <label for="checkbox" class="toggle-switch__button" role="switch" aria-checked="false" tabindex="0">
+        <input type="checkbox" id="checkbox" name="checkbox" value="1" class="toggle-switch__checkbox">
         <span class="toggle-switch__circle"></span>
       </label>
       <span class="toggle-switch__label">Monthly</span>
@@ -30,8 +30,7 @@
   </header>
 
   <main>
-
-    <article class="card">
+    <section class="card" aria-label="Basic Pricing Plan">
       <h2 class="card__plan">Basic</h2>
       <div class="card__price">
         <span class="card__currency">&dollar;</span>
@@ -44,9 +43,9 @@
         <li class="card__item">Send up to 3 GB</li>
       </ul>
       <button class="card__button">Learn More</button>
-    </article>
+    </section>
 
-    <article class="card card--primary">
+    <section class="card card--primary" aria-label="Professional Pricing Plan">
       <h2 class="card__plan">Professional</h2>
       <div class="card__price">
         <span class="card__currency">&dollar;</span>
@@ -59,9 +58,9 @@
         <li class="card__item">Send up to 10 GB</li>
       </ul>
       <button class="card__button">Learn More</button>
-    </article>
+    </section>
 
-    <article class="card">
+    <section class="card" aria-label="Master Pricing Plan">
       <h2 class="card__plan">Master</h2>
       <div class="card__price">
         <span class="card__currency">&dollar;</span>
@@ -74,8 +73,7 @@
         <li class="card__item">Send up to 20 GB</li>
       </ul>
       <button class="card__button">Learn More</button>
-    </article>
-
+    </section>
   </main>
 
   <div class="attribution">

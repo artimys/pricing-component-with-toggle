@@ -77,8 +77,7 @@ COMPONENTS
     }
     &__button {
         border-radius: 5px;
-        // border: 1px solid transparent;
-        border: 0;
+        border: 1px solid rgba(255,255,255, 1);
         background: $primary-gradient;
         width: 100%;
         padding: 1.3em 0;
@@ -134,6 +133,7 @@ $circle-translate: $toggle-button-width - $circle-size - ($toggle-button-padding
     display: flex;
     align-items: center;
     column-gap: 20px;
+    color: $light-grayish-blue;
 
     // Real checkbox hidden
     &__checkbox {
@@ -141,14 +141,8 @@ $circle-translate: $toggle-button-width - $circle-size - ($toggle-button-padding
         position: absolute;
         top: -50px;
 
-        &:checked {
-            // ~ selector looks at sibling selector
-            // then descend to circle element to style
-            ~ .toggle-switch__button {
-                .toggle-switch__circle {
-                    transform: translate($circle-translate);
-                }
-           }
+        &:checked + .toggle-switch__circle {
+            transform: translate($circle-translate);
         }
     }
     &__button {

@@ -84,7 +84,7 @@ COMPONENTS
 
 .card__button {
   border-radius: 5px;
-  border: 0;
+  border: 1px solid white;
   background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
   background: linear-gradient(90deg, #a3a8f0, #696fdd);
   width: 100%;
@@ -140,6 +140,7 @@ COMPONENTS
           align-items: center;
   -webkit-column-gap: 20px;
           column-gap: 20px;
+  color: #b3b5c6;
 }
 
 .toggle-switch__checkbox {
@@ -148,7 +149,7 @@ COMPONENTS
   top: -50px;
 }
 
-.toggle-switch__checkbox:checked ~ .toggle-switch__button .toggle-switch__circle {
+.toggle-switch__checkbox:checked + .toggle-switch__circle {
   -webkit-transform: translate(28px);
           transform: translate(28px);
 }
