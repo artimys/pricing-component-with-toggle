@@ -131,7 +131,7 @@ COMPONENTS
 LAYOUT
 =========*/
 header, main {
-  width: 90%;
+  width: 85%;
   max-width: 1050px;
   text-align: center;
 }
@@ -148,9 +148,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   row-gap: 2em;
 }
 
@@ -166,6 +163,9 @@ DESKTOP
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .card {
     -webkit-box-flex: 1;
