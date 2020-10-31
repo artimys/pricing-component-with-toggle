@@ -91,11 +91,12 @@ COMPONENTS
         text-transform: uppercase;
         &:hover {
             cursor: pointer;
+        }
+        &:active {
             background: none;
             border: 1px solid $dark-grayish-blue;
             background-color: transparent;
             color: $dark-purple;
-
         }
     }
 }
@@ -113,7 +114,7 @@ COMPONENTS
         background: none;
         background-color: #fff;
         color: $dark-purple;
-        &:hover {
+        &:active {
             border: 1px solid #fff;
             background-color: transparent;
             color: $white-text;
@@ -122,6 +123,61 @@ COMPONENTS
 }
 
 
+// ----------- Toggle switch---------------------------
+// To modify toggle size,
+// please only update the $circle-size variable
+$circle-size: 20px;
+$toggle-button-width: ($circle-size * 2) + 18px;
+$toggle-button-padding: 5px;
+$circle-translate: $toggle-button-width - $circle-size - ($toggle-button-padding * 2);
+
+.toggle-switch {
+    margin-top: 2.5em;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    // color: $grayish-blue;
+
+    // Real checkbox hidden
+    &__checkbox {
+        visibility: hidden;
+        position: absolute;
+        top: -50px;
+
+        &:checked {
+            // ~ selector looks at sibling selector
+            // then descend to circle element to style
+            ~ .toggle-switch__button {
+                .toggle-switch__circle {
+                    transform: translate($circle-translate);
+                }
+           }
+        }
+    }
+    &__button {
+        display: inline-block;
+        border-radius: 50px;
+        width: $toggle-button-width;
+        padding: $toggle-button-padding;
+        background-image: $primary-gradient;
+        cursor: pointer;
+    }
+     &__circle {
+        display: block;
+        background-color: #fff;
+        border-radius: 50%;
+        width: $circle-size;
+        height: $circle-size;
+        transform: translate(0);
+        transition: transform 0.5s ease;
+    }
+    &:active {
+        .toggle-switch__button {
+            opacity: 0.6;
+            // background-image: $rainbow-toggle;
+        }
+    }
+}
 
 
 /*==========
@@ -135,6 +191,9 @@ header, main {
 
 header {
     margin: 4em 0 5em;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 main {
@@ -151,7 +210,7 @@ DESKTOP
 
 @media only screen and (min-width: 1100px) {
     header {
-        margin: 1em 0 5em;
+        margin: 1em 0 4.3em;
     }
 
     main {

@@ -98,6 +98,9 @@ COMPONENTS
 
 .card__button:hover {
   cursor: pointer;
+}
+
+.card__button:active {
   background: none;
   border: 1px solid #494c5f;
   background-color: transparent;
@@ -121,10 +124,61 @@ COMPONENTS
   color: #696fdd;
 }
 
-.card--primary .card__button:hover {
+.card--primary .card__button:active {
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
+}
+
+.toggle-switch {
+  margin-top: 2.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.toggle-switch__checkbox {
+  visibility: hidden;
+  position: absolute;
+  top: -50px;
+}
+
+.toggle-switch__checkbox:checked ~ .toggle-switch__button .toggle-switch__circle {
+  -webkit-transform: translate(28px);
+          transform: translate(28px);
+}
+
+.toggle-switch__button {
+  display: inline-block;
+  border-radius: 50px;
+  width: 58px;
+  padding: 5px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(90deg, #a3a8f0, #696fdd);
+  cursor: pointer;
+}
+
+.toggle-switch__circle {
+  display: block;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.toggle-switch:active .toggle-switch__button {
+  opacity: 0.6;
 }
 
 /*==========
@@ -138,6 +192,16 @@ header, main {
 
 header {
   margin: 4em 0 5em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main {
@@ -156,7 +220,7 @@ DESKTOP
 =========*/
 @media only screen and (min-width: 1100px) {
   header {
-    margin: 1em 0 5em;
+    margin: 1em 0 4.3em;
   }
   main {
     -webkit-box-orient: horizontal;
